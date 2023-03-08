@@ -4,8 +4,28 @@
         <title>Example</title>
     </head>
     <body>
-        <p>This is an example of a simple HTML page with one paragraph.</p>
-        
-        <a class="twitter-timeline" href="https://twitter.com/onetimechad?ref_src=twsrc%5Etfw">Tweets by onetimechad</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	<div align="center">
+	
+        <p>
+	<input type="text" oninput="decodeencode()" id="key" size="100" placeholder="please paste key here">
+        <input type="text" oninput="decodeencode()" id="message" size="100" placeholder="please paste message to decode or write message to encode here">
+	</p>
+	
+        <p>
+        <a id="reslut">...</a>
+        </p>
+
+        </div>
+        <script>
+            function decodeencode() {
+               console.log("Hello world!");               
+
+               reslut.href = `https://twitter.com/intent/tweet?text=${message.value}`
+               reslut.innerHTML = `using this key "${key.value}" and this input "${message.value}" we decode or encode. please klick this to tweet`;
+           };
+	</script>
+
+        <a class="twitter-timeline" href="https://twitter.com/onetimechad?ref_src=twsrc%5Etfw"></a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </body>
 </html>
